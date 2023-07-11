@@ -43,7 +43,7 @@ export default function Home() {
           onSubmit={handleSubmit}
           className="flex justify-between items-center p-3 w-[300px] pl-5 md:w-[400px]  lg:w-[500px] mx-auto bg-transparent border border-gray-300 rounded-2xl "
         >
-          <div className="w-full">
+          <div className="w-full block">
             <input
               value={city}
               onChange={(e) => {
@@ -54,7 +54,9 @@ export default function Home() {
               placeholder="Enter city name"
             />
           </div>
-          <button className="text-2xl">&#128269;</button>
+          <button className="text-2xl inline-block translate-x-[-30px] sm:translate-x-0">
+            &#128269;
+          </button>
         </form>
         <Weather />
       </div>

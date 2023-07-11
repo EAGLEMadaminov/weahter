@@ -5,6 +5,16 @@ import { useGlobalContext } from "../contex.jsx";
 function Weather() {
   const { addInfo, hourlyInfo, current, currentIcon } = useGlobalContext();
 
+  if (!addInfo) {
+    return (
+      <div>
+        <h1 className="text-red text-center">
+          Sorry this city doesn't found. Please enter corrent city name !
+        </h1>
+      </div>
+    );
+  }
+
   return (
     <div className=" flex w-[250px] md:w-[700px] lg:w-full flex-col   justify-center items-center mx-auto text-center">
       {addInfo.map((item, index) => {
@@ -50,7 +60,7 @@ function Weather() {
                 className="mx-auto "
               ></Image>
               <div className="flex w-20 mx-auto justify-between">
-                <p className="capitalize">{last.condition.text}</p>
+                <p className="capitalize mx-2">{last.condition.text}</p>
                 <p>{last.temp_c.toFixed(0)}&#176;C</p>
               </div>
               <div className="flex justify-between">
