@@ -9,7 +9,7 @@ function Weather() {
     return (
       <div>
         <h1 className="text-red text-center">
-          Sorry this city doesn't found. Please enter corrent city name !
+          Sorry this city doesn&apos;t found. Please enter corrent city name !
         </h1>
       </div>
     );
