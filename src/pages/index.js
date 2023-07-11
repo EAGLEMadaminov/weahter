@@ -55,7 +55,7 @@ export default function Home() {
             />
           </div>
           <button className="text-2xl inline-block translate-x-[-30px] sm:translate-x-0">
-            &#128269;
+            🔍
           </button>
         </form>
         <Weather />
